@@ -95,7 +95,7 @@ pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")
 
 S<-data.frame(0,0,0,0)
 colnames(S)<-c("i","j","h","k")
-for (h in c(4000,3500,4500,5000,5500,6000)) {
+for (h in c(2500,3000,4000,3500,4500,5000,5500,6000)) {
   for (k in c(15,10,5,20,25)) {
     pbmcs <- subset(pbmc, subset = nFeature_RNA > 200 & nFeature_RNA < h & percent.mt < k)
     pbmcs <- NormalizeData(pbmcs)
